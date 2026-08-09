@@ -8,10 +8,6 @@ interface VideoCollection<E>
 interface LL<E>
 interface Tree<E>
 interface Graph<V, E>
-interface Vertex<V>
-interface Edge<E>
-interface Position<E>
-interface PositionalList<E>
 
 ' Abstract Classes
 abstract class BST<E>
@@ -21,7 +17,6 @@ class SLL<E>
 class DLL<E>
 class AVLTree<E>
 class BSTTree<E>
-class LinkedPositionalList<E>
 class AdjacencyMapGraph<V, E>
 
 ' Domain entities & Enums
@@ -43,9 +38,8 @@ BST ..|> Tree
 AVLTree --|> BST
 BSTTree --|> BST
 
-' Graph & Positional List implementations
+' Graph implementations
 AdjacencyMapGraph ..|> Graph
-LinkedPositionalList ..|> PositionalList
 
 ' Entity interfaces & Relationships
 Video ..|> Comparable
