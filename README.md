@@ -20,7 +20,7 @@ The **VideoStore** program is a functional management system that allows for the
 
 <div align="center">
   <br>
-  <img src="https://github.com/user-attachments/assets/72d7e0b7-131a-44ba-b18f-34ce360f18b1" width="650" alt="VideoStore UML Architecture">
+  <img src="https://github.com/user-attachments/assets/33245185-d754-4757-b15e-d4e6152b3165" width="650" alt="VideoStore UML Architecture">
   <p><i><b>Figure 1:</b> UML Class Diagram of the VideoStore System </i></p>
   <br>
 </div>
@@ -50,7 +50,7 @@ The benchmark scales through four tiers, culminating in a maximum load:
 * **Requests:** 20,000 (Operations 5, 6, and 7)
 
 <div align="center">
-<img width="840" height="427" alt="Diagram" src="https://github.com/user-attachments/assets/340fd1a3-5f4c-4f1e-b512-9a4df8668cab" />
+  <img width="1103" height="655" alt="Image" src="https://github.com/user-attachments/assets/8b2f62c5-678e-468c-ab44-846e78c115bd" />
   <p><i>Figure 2: Comparison of total service runtime (Averaged over 3 runs)</i></p>
 </div>
 
