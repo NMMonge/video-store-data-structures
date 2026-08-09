@@ -2,44 +2,60 @@
 skinparam classAttributeIconSize 0
 
 ' Interfaces
-interface Identifiable
 interface Comparable
+interface Identifiable
 interface VideoCollection<E>
 interface LL<E>
 interface Tree<E>
+interface Graph<V, E>
+interface Vertex<V>
+interface Edge<E>
+interface Position<E>
+interface PositionalList<E>
 
-' Abstract class
+' Abstract Classes
 abstract class BST<E>
 
-' Concrete implementations
+' Concrete Data Structures
 class SLL<E>
 class DLL<E>
-class BSTTree<E>
 class AVLTree<E>
+class BSTTree<E>
+class LinkedPositionalList<E>
+class AdjacencyMapGraph<V, E>
 
-' Domain entities
+' Domain entities & Enums
 class Video
 class Customer
 class VideoStore
+enum Genre
 
-' Interface hierarchy
+' VideoCollection hierarchy
 LL --|> VideoCollection
 Tree --|> VideoCollection
 
-' Implementations
-BST ..|> Tree
+' Linked List implementations
 SLL ..|> LL
 DLL ..|> LL
 
-' Inheritance
-BSTTree --|> BST
+' Tree implementations
+BST ..|> Tree
 AVLTree --|> BST
+BSTTree --|> BST
 
-' Entity interfaces
+' Graph & Positional List implementations
+AdjacencyMapGraph ..|> Graph
+LinkedPositionalList ..|> PositionalList
+
+' Entity interfaces & Relationships
 Video ..|> Comparable
 Video ..|> Identifiable
 Customer ..|> Comparable
 Customer ..|> Identifiable
+
+Video "1" *-- "*" Genre : has
+AdjacencyMapGraph --> Video : stores node
+AdjacencyMapGraph --> Genre : stores node
 
 ' Composition
 VideoStore --> VideoCollection : manages
